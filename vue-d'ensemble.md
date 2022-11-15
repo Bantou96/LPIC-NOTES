@@ -3,7 +3,7 @@ Un programme ou un ensemble de programmes permettant la gestion de l'ordinateur 
 ## Noyau
 Le programme principal du système d'exploitation chargé en mémoire au démarrage du système.
 ## Architecture
-Utilisateurs --------- Applications ---------- Système d'exploitation ----------- [ CPU ---- MEMOIRE ----- I/O]
+Utilisateurs <---------> Applications <----------> Système d'exploitation -----------> [ CPU | MEMOIRE | I/O | FILE SYSTEM]
 ## Logiciel
 Ensemble de programmes (Code source + Code Objet)
 ## Logiciel libre & Open source
