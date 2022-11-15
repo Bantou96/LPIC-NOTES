@@ -40,6 +40,21 @@ Il fournit les informations sur le système
 - Fichier socket : (s)
 - Lien symbolique sur un fichier : (l)  
 
+### Arborescence
+- /     --> Racine du système 
+- /bin  --> Commande binaires utilisateurs essentielles 
+- /boot --> fichiers statiques du démarrage
+- /dev  --> fichiers de périphériques
+- /etc  --> fichiers de configuration d'un sytème spécifique
+- /lib  --> fichiers des bibliothèques partagés et des modules du noyau
+- /home --> répertoires personnels des utilisateurs 
+- /root --> répertoire personnel de l'admin 
+- /mnt  --> point de montage pour les systèmes de fichiers 
+- /proc --> système de fichiers virtuel d'informations du noyau et des processus 
+- /sbin --> répertoire contenant les exécutables
+- /sys  --> fichiers d'état des périphériques 
+- /tmp  --> fichiers temporaires
+
 ### Répertoires spéciaux
 - Répertoire courant noté .
 - Répertoire parent noté ..
