@@ -28,3 +28,24 @@ Gestionnaire de téléchargement et résolution de dépendances
 - yum search keyword  --> recherche d'un paquet
 - yum clean [option]  --> libérer de l'espace disque (options : headers, packages, metadata, dbcache, plugins, expire-cache, rpmdb, all)
 - yum shell  --> obtenir un shell yum 
+
+### Configuration de Yum
+- fichier de configuration : etc/yum.conf
+- Modification des dépôts : etc/yum.repos.d
+
+### Options de base 
+- verbosité : debuglevel = value
+- exclusion de paquets : exclude = package_name
+- activer / désactiver la vérification des signatures : gpgcheck = value binary
+- nombre d'essais avant de retourner une erreur : retries = value
+- prendre en compte le type d'architecture lors de MAJ : exactarch = value binary
+
+### Gestion des priorités
+- yum install yum-priorities
+- fichier : etc/yum/pluginconf.d/priorities. conf
+
+### Ajout de dépôts via rpm 
+- wget link  --> téchargement du paquet
+- rpm --import gpg_link  --> importation de la clé GPG
+- rpm -K file.rpm --> vérification du checksum
+- yum check-update
