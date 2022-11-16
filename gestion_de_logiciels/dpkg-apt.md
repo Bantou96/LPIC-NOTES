@@ -56,8 +56,15 @@ apt-cache unmet
 ```
 apt-cache depends paquet
 ```
-#### Recherche de paquets 
-- recherche de paquets : apt-cache pkgnames (paquets installés) || apt-cache search expression (recherche dans les dépôts)
+#### Recherche de paquets déjà installés
+```
+apt-cache pkgnames
+```
+#### Recherche de paquets dans les dépôts
+```
+apt-cache search <expression>
+```
+
 
 ### APT-GET
 - mettre à jour les informations sur les dépôts : apt-get update
