@@ -4,14 +4,14 @@ Une variable permet d'associer une clé (son nom) à une valeur, en mémoire.
 
 #### Déclaration : aucun typage donc une simple affectation suffit
 ```
-Exemple : 
 var="Hello"
 ```
 #### Utilisation : nécessite le caractère $
 ```
-Exemple :
 echo $mavariable
+```
 ou 
+```
 echo ${mavariable}
 ```
 #### Portée d'une variable : par défaut locale
@@ -20,7 +20,6 @@ echo ${mavariable}
 #### Variable d'environnement : accessible par tout les programmes au sein d'un même environnement
 Pour cela il faut utiliser la commande : export + la référence de la variable
 ```
-Exemple :
 var="Hello"
 export var
 ```
