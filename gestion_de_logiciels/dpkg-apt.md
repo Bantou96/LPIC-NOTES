@@ -66,14 +66,45 @@ apt-cache search <expression>
 ```
 
 
-### APT-GET
-- mettre à jour les informations sur les dépôts : apt-get update
-- recherhe des dépendances défectueuses : apt-get check 
-- nétoyer le référentiel local des paquets récupérés : apt-get clean
-- installer : apt-get install paquet (options -f répare les dépendances insatisfaites)
-- désinstaller : apt-get remove paquet  || apt-get autoremove (supprimer les paquets orphelins ne répondant à aucune dépendances)
-- récuperer un paquet source : apt-get source package (options -b compile après récupération du fichier source)
-- apt-get upgrade || apt-get dist-upgrade (système intelligent de résolution de conflit)
-
+## APT-GET
+#### Mettre à jour
+```
+apt-get update 
+``` 
+#### Recherhe des dépendances défectueuses
+```
+apt-get check 
+``` 
+#### Nettoyer le référentiel local des paquets récupérés
+```
+apt-get clean 
+``` 
+#### Installer
+```
+apt-get install paquet 
+``` 
+- Options ```-f``` : permet de réparer les dépendances insatisfaites
+#### Désinstaller
+```
+apt-get remove paquet
+```
+#### Supprimer les paquets orphelins ne répondant à aucune dépendances
+```
+apt-get autoremove 
+```
+#### Récuperer un paquet source  
+```
+apt-get source package
+```
+- Option ```-b``` : permet de compiler après récupération du fichier source
+#### upgrade
+```
+apt-get upgrade
+```
+On peut aussi utiliser le système intelligent de résolution de conflit
+```
+apt-get dist-upgrade
+```
 ### Configuration de APT
-- fichier /etc/apt/sources.list  --> deb link (distribution_code_name || catégories_version) section 
+#### fichier /etc/apt/sources.list  
+deb link (distribution_code_name || catégories_version) section 
