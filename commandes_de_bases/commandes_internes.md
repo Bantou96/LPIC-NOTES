@@ -18,13 +18,13 @@ cd /home
 ```
 pwd
 ```
-- Option ```-L``` : suivre les liens symboliques utiliser
+- Option ```-L``` : permet suivre les liens symboliques utiliser
 #### Afficher une chaine de caractère : ```echo```
 ```
 echo Hello
 ```
-- Option ```-n``` : supprimer le retour charriot
-- Option ```-e``` : afficher les séquences d'échappement
+- Option ```-n``` : permet de supprimer le retour charriot
+- Option ```-e``` : permet d'afficher les séquences d'échappement
 #### Lancer un programme en remplacement du shell
 ```
 exec ls
