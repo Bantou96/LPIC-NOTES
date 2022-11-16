@@ -23,4 +23,4 @@ les commandes utiles
 - x : effacer le caractère 
 - dw : effacer jusqu'à la fin de mot
 
-### vimtutor 
+#### vimtutor (à voir)
