@@ -17,8 +17,14 @@
 met à disposition une liste de paquets à jour, validés.
 
 ### Les outils 
-- les gestionnaires de paquets : dpkg - rpm 
-- les gestionnaires de téléchargement et résolution de dépendances : apt & synaptic - yum - urpmi(Mandriva) - Zypp(Suse)
+- les gestionnaires de paquets : 
+  - dpkg 
+  - rpm 
+- les gestionnaires de téléchargement et résolution de dépendances : 
+  - apt & synaptic 
+  - yum 
+  - urpmi(Mandriva) 
+  - Zypp(Suse)
 
 ### Comparaison 
 - signature des paquets : rpm
