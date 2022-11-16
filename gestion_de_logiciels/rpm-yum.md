@@ -41,7 +41,7 @@ rpm -e prog-name
 Gestionnaire de téléchargement et résolution de dépendances
 #### Mettre à jour
 ```
-yum update yum update yum 
+yum update 
 ```
 Pour une première installation faire :
 ```
