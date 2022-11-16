@@ -12,13 +12,13 @@
 
 #### commande man
 ```
-exemple : man cd 
+man cd 
 ```
 #### Aide interne à une commande avec l'option --help
 ```
-exemple : cd --help 
+cd --help 
 ```
 #### Informations sur la commande 
 ```
-exemple : info ls 
+info ls 
 ```
