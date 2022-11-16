@@ -1,16 +1,62 @@
-### Commande dpkg
-- installer un paquet : dpkg -i file.deb (-R --> mode récursif ; --no-act --> simple test)
-- obtenir des informations : dpkg -p paquet  || dpkg -I file.deb  || dpkg -S pattern  || dpkg -L file
-- Désinstaller un paquet : dpkg -r paquet || dpkg -P (supprimer les fichiers de configuration)
-- relancer le script post-installation : dpkg-reconfigure paquet  || dpkg --configure paquet
-- paquets partiellements installés : dpkg -C
-
-### APT-CACHE (Advanced Packaging Tool)
-- Manipulation du cache des paquets : apt-cache 
-- apt-cache showpkg package_name : informations sur un paquet
-- apt-cache stats : afficher statistiques
-- apt-cache unmet : afficher les dépendances insatisfaites
-- apt-cache depends paquet : afficher les dépendances d'un paquet
+## Commande dpkg
+#### installation
+```
+dpkg -i file.deb
+```
+- Options : 
+  -  ```-i``` : install  
+  -  ```-R``` : mode récursif   
+  -  ```--no-act``` : permet juste d'effectuer un test mais n'installe pas
+#### Désinstallation
+```
+dpkg -r paquet
+```
+- Options : 
+  -  ```-r``` : désinstaller 
+  -  ```-P``` : supprimer les fichiers de configuration  
+#### Obtenir des informations sur un paquet déjà installé
+```
+dpkg -p paquet
+```
+#### Obtenir des informations sur un paquet non installé
+```
+dpkg -I file.deb
+```
+#### Obtenir des informations sur l'appartenance d'un fichier
+```
+dpkg -S pattern  
+```
+#### Relancer le script post-installation 
+```
+dpkg-reconfigure paquet  
+```
+ou 
+```
+dpkg --configure paquet  
+```
+#### Rechercher les paquets partiellements installés 
+```
+dpkg -C  
+```
+## APT-CACHE (Advanced Packaging Tool)
+### Manipulation du cache des paquets avec la commande : ```apt-cache``` 
+#### Informations sur un paquet
+```
+apt-cache showpkg package_name 
+```
+#### Afficher les statistiques 
+```
+apt-cache stats
+```
+#### Afficher les dépendances insatisfaites
+```
+apt-cache unmet 
+```
+#### Afficher les dépendances d'un paquet
+```
+apt-cache depends paquet
+```
+#### Recherche de paquets 
 - recherche de paquets : apt-cache pkgnames (paquets installés) || apt-cache search expression (recherche dans les dépôts)
 
 ### APT-GET
