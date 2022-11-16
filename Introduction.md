@@ -70,6 +70,7 @@ Il fournit les informations sur le système
 - Les alias (raccourcis de commandes)
 - Syntaxe d'une commande : 
   - commande -options arg1 arg2
+
 Exemple
 ``` 
 wc -l /etc/passwd
