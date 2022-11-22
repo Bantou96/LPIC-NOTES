@@ -73,3 +73,33 @@ Options :
   - ``` -u ``` : Vérifier l'UID
   - ``` -l ``` : vérifier le nom de la partition
 
+#### Débogage d'un FS (à utiliser en dernier recours)
+C'est une alliance entre dumpe2fs + tune2fs + others. Par défaut en Read-Only (RO)
+
+L'option -w permet de se mettre en Read-Write (RW)
+```
+debugfs -w  <partition> 
+```
+Options : 
+  - ```stats``` : récupérer les informations générales
+  - ```stat file``` : récupérer des informations sur un fichier spécifique
+  - ```lsdel``` : lister les fichiers supprimés
+  - ```undel <inode> new_name``` : récupérer un fichier supprimé
+
+#### Vérifier l'intégralité d'un système de fichiers (uniquement en RO)
+```
+fsck  <partition> 
+```
+Options : 
+  - ``` -A ``` : Vérification
+  - ``` -V ``` : Verbose
+  - ``` -N ``` : No action (test)
+  - ``` -t <fstype> ``` : forcer le type de FS
+
+Pour XFS utiliser la commande suivante :
+```
+xfs_check  <partition> 
+```
+
+
+
