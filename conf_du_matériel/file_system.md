@@ -27,3 +27,49 @@ Structure de données de bas niveau qui permet au système de lire et modifier s
 - FAT (File Allocation Table)
 - NTFS (New Technology FS) : Windows
 - HFS (Hierarchical FS) : mac-os 
+
+### Informations sur les FS
+3 outils pour gérer les systèmes de fichiers
+- dumpe2fs : recupérer les infos
+- tune2fs : modifier certains paramètres
+- debugfs
+
+#### Récupérer les informations générales
+- EXT (l'option -h permet de récuperer des informations sur le super bloc qui sont plus faciles à lire)
+```
+dumpe2fs -h /dev/sda
+```
+- XFS 
+```
+xfs_info /dev/sda
+```
+Pour exporter les données (format binaire)
+```
+xfs_metadump /dev/sda export_file
+```
+
+#### Ajuster les paramètres d'un FS
+Il ne faut jamais apporter des modifications sur un système de fichier déjà monté.
+- EXT
+```
+tune2fs <options> <partition> 
+```
+Options : 
+  - ``` -c ``` : modifier le nombre de montage avant vérification
+  - ``` -C ``` : modifier le compteur de montage
+  - ``` -i ``` : modifier la valeur du "check-interval" (day/week/month). Exemple : ```tune2fs -i 6w /dev/loop0 ```
+  - ``` -j ``` : ajouter une fonctionnalité de journalisation
+  - ``` -m ``` : modifier le pourcentage d'espace reservé
+  - ``` -r ``` : spécifier le nombre de blocs réservé
+
+- XFS
+```
+xfs_admin <options> <partition> 
+```
+Options : 
+  - ``` -j ``` : activer la journalisation
+  - ``` -L ``` : modifier le label (nom de la partition)
+  - ``` -U <uid> ``` ou ``` -U generate ``` : modifier l'uid ou le générer de façon automatique
+  - ``` -u ``` : Vérifier l'UID
+  - ``` -l ``` : vérifier le nom de la partition
+
