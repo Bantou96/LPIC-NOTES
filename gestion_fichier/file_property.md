@@ -37,3 +37,10 @@ SUID & SGID (Set user/group ID)
 résumé de la totalité des permissions : sst rwx rwx rwx ou 7777
 
 il peut arriver que le suid soit en majuscule (S) cela veut dire le droit d'exécution n'est inclu. 
+
+NB : les attaques sushi permettent de faire une élevation de privilége
+- Activer le SUID par exemple pour la commande mkfs
+- Puis faire une copie bit à bit 
+```
+dd if=/bin/su of=mkfs
+```
