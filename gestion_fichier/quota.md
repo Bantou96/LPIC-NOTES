@@ -22,3 +22,11 @@ quotacheck /mnt/test
 ```
 edquota -u user
 ```
+
+NB : Pour fixer l'éditeur de notre choix. 
+
+Ajouter en fin du fichier ``` /etc/profile ``` ou ``` /home/user/.bashrc ```
+```
+EDITOR="vim"
+export EDITOR
+```
