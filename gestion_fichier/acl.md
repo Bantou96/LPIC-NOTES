@@ -37,5 +37,21 @@ Exemple : mask : r-x ; user : rw- ; #effective : r--
 ```
 setfacl -m m::r-x file
 ```
+### Umask
+Par défaut :
+- file : 0666
+- directory : 0777
+- Afficher l'umask
+```
+umask -S
+```
+ou 
+```
+umask -p
+```
+- Modififer l'umask (soustraire la valeur préciser dans la commande). Exemple :
+```
+umask 0022
+```
 ### Hierarchie 
 Droits POSIX --> mask --> ACL user --> ACL group.
